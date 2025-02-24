@@ -394,7 +394,21 @@
 
           <!-- Calculadora -->
           <v-card variant="tonal" class="mt-8 mx-auto" style="max-width: 600px;">
-            <v-card-title class="text-h6">Calculadora de Material</v-card-title>
+            <v-card-title class="d-flex justify-space-between align-center">
+      <span class="text-h6">Calculadora de Material</span>
+      <v-tooltip v-model="showTooltip" location="start">
+        <template v-slot:activator="{ props }">
+          <v-btn size="x-small" icon v-bind="props" @click="showTooltip = !showTooltip">
+            <v-icon color="yellow">mdi-help</v-icon>
+          </v-btn>
+        </template>
+        <div>
+          <p>"m²" é a unidade de área, calculada pela multiplicação da altura pela largura.</p>
+          <v-divider></v-divider>
+          <p>"un" é a unidade genérica que pode representar quilo (kg) ou litro (L), dependendo do material.</p>
+        </div>
+      </v-tooltip>
+    </v-card-title>
             <v-divider></v-divider>
             <v-card-text>
               <v-row>
@@ -418,14 +432,14 @@
                     step="0.01"
                     variant="outlined"
                     density="compact"
-                  ></v-text-field>
+                  ></v-text-field>                  
                 </v-col>
-              </v-row>
+              </v-row>              
               
               <div class="text-center text-h6">
                 Quantidade necessária: 
-                <span>{{ resultadoCalculo + ' un' || '0.00' }}</span>
-              </div>
+                <span>{{ resultadoCalculo + ' un' || '0.00' }}</span>                
+              </div>              
             </v-card-text>
           </v-card>
         </div>
@@ -529,7 +543,8 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 export default {
-  data: () => ({        
+  data: () => ({    
+    showTooltip: false,    
     abaAtiva: 'obra',
     comodos: [],
     dialogConfirmacao: false,
