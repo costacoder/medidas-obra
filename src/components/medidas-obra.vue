@@ -424,7 +424,7 @@
               
               <div class="text-center text-h6">
                 Quantidade necessária: 
-                <span>{{ resultadoCalculo + ' m²/un' || '0.00' }}</span>
+                <span>{{ resultadoCalculo + ' un' || '0.00' }}</span>
               </div>
             </v-card-text>
           </v-card>
