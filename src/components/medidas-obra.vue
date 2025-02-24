@@ -451,7 +451,7 @@
           <v-card 
             variant="tonal" 
             class="mx-auto" 
-            style="max-width: 800px"
+            style="max-width: 400px"
             >
             <v-card-title class="text-h6">PRODUTOS ECOCRISTAL</v-card-title>
             <v-divider></v-divider>
@@ -466,7 +466,7 @@
                 <tbody>
                   <tr v-for="(produto, index) in produtos" :key="index">
                     <td>{{ produto.nome }}</td>
-                    <td>{{ produto.consumoMedio }}</td>                    
+                    <td style="text-align: center;">{{ produto.consumoMedio }}</td>                    
                   </tr>
                 </tbody>
                 <img
@@ -476,8 +476,8 @@
                     top: 50%; /* Centraliza verticalmente */
                     left: 50%; /* Centraliza horizontalmente */
                     transform: translate(-50%, -50%); /* Ajusta o posicionamento */
-                    max-width: 50%; /* Define a largura máxima da imagem */
-                    opacity: 0.3; /* Define a opacidade da imagem */
+                    max-width: 100%; /* Define a largura máxima da imagem */
+                    opacity: 0.1; /* Define a opacidade da imagem */
                   "
                 />
               </v-table>
