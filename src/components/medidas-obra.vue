@@ -506,7 +506,7 @@
             <v-btn
               color="green darken-1"
               dark
-              href="https://wa.me/5516991731152"
+              href="https://wa.me/5516988044062" 
               target="_blank"
               rel="noopener"
               class="mt-5"
@@ -765,7 +765,7 @@ export default {
     },
 
     enviarWhatsApp() {
-      const numero = '5516991731152';
+      const numero = '5516988044062';
       const texto = encodeURIComponent(
         `Olá, gostaria de solicitar um orçamento.\n\n` +
         `*Metragens:*\n` +
