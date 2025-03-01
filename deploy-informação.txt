@@ -1,0 +1,6 @@
+Deploy feito no VERCEL.
+
+https://vercel.com/alexandre-costas-projects-f20537b9/na-obra
+
+para modificar o app publicado, basta fazer a modificação e subir pro github, 
+uma vez atualizado no github, será feito o deploy automático.
